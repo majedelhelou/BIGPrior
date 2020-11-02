@@ -169,7 +169,7 @@ if __name__ == "__main__":
     
     # Training
     parser.add_argument("--batch_size", type=int, default=4, help="Training batch size")
-    parser.add_argument("--epochs", type=int, default=50, help="Number of training epochs")
+    parser.add_argument("--epochs", type=int, default=25, help="Number of training epochs")
     parser.add_argument("--lr", type=float, default=1e-5, help="Initial learning rate")
     parser.add_argument("--phi_weight", type=float, default=0.0, help="Weight for phi norm regularization")
     parser.add_argument("--train_count", type=int, default=250, help="Number of images (in the experiment) to be used for training, the rest is for test")
