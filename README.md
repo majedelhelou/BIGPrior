@@ -6,6 +6,14 @@
 ![pytorch 1.1.0](https://img.shields.io/badge/pytorch-1.1.0-green.svg?style=plastic)
 ![CUDA 10.1](https://camo.githubusercontent.com/5e1f2e59c9910aa4426791d95a714f1c90679f5a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f637564612d31302e312d677265656e2e7376673f7374796c653d706c6173746963)
 
+
+## BIGPrior pipeline
+The figure below illustrates the BIGPrior pipeline, with a generative-network inversion for the learned prior. 
+<p align="center">
+  <img src="readme_figures/pipeline.png" width="600px"/>
+</p>
+
+
 {Note: repo under construction, paper under submission}
 
 #### [[Paper to appear]](404)
@@ -17,11 +25,7 @@
 **Key take-aways:** our paper presents a learning-based restoration framework that forms a _generalization of various families of classical methods_. It is both tightly connected with Bayesian estimation upon which it builds, and also to classical dictionary methods. Our BIGPrior makes the _explicit integration of learned-network priors possible_, notably a generative-network prior. Its biggest advantage is that, by decoupling data fidelity and prior hallucination, it structurally provides a _per pixel fusion metric_ that determines the contribution of each. This can be important both for end users and for various downstream applications. We hope this work will foster future learning methods with clearly decoupled network hallucinations, both for interpretability, reliability, and to safeguard against the hazards of black-box restoration. 
 
 
-## BIGPrior pipeline
-The figure below illustrates the BIGPrior pipeline, with a generative-network inversion for the learned prior. 
-<p align="center">
-  <img src="readme_figures/pipeline.png" width="600px"/>
-</p>
+
 
 
 ### Repo structure overview
