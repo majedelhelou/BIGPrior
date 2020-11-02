@@ -1,0 +1,14 @@
+Pillow<7
+tqdm
+numpy
+torch=1.5.0+cu101
+torchvision=0.6.0+cu101
+opencv-python
+tensorflow-gpu<2
+lmdb
+beautifulsoup4
+requests
+scikit-image
+scipy
+matplotlib
+urllib3
