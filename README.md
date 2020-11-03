@@ -6,6 +6,7 @@
 ![pytorch 1.1.0](https://img.shields.io/badge/pytorch-1.1.0-green.svg?style=plastic)
 ![CUDA 10.1](https://camo.githubusercontent.com/5e1f2e59c9910aa4426791d95a714f1c90679f5a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f637564612d31302e312d677265656e2e7376673f7374796c653d706c6173746963)
 
+{Note: repo under construction, paper under submission}
 
 ## BIGPrior pipeline
 The figure below illustrates the BIGPrior pipeline, with a generative-network inversion for the learned prior. 
@@ -13,8 +14,6 @@ The figure below illustrates the BIGPrior pipeline, with a generative-network in
   <img src="readme_figures/pipeline.png" width="600px"/>
 </p>
 
-
-{Note: repo under construction, paper under submission}
 
 #### [[Paper to appear]](404)
 
@@ -28,15 +27,15 @@ The figure below illustrates the BIGPrior pipeline, with a generative-network in
 
 
 
-## Repo structure overview
+## Structure overview
 All code is in the `code` directory, and _input_ data are in the `data` folder. The `net_data` directory stores the network weights per epoch (along with many other trackers and all experiment parameters), it uses an automated index incrementation strategy on top of the experiment name for avoiding over-writing. We generate a lot of intermediate data for the different experiments, and along with the final outputs, these are written in `inter_data`.
 
 
-## Setting up the data
+## Data setup
 The needed data are already stored under `data`, if you want to repeat our experiments with different datasets we added a help [README](https://github.com/majedelhelou/BIGPrior/tree/main/data/lsun) under `data/lsun/` explaining how to pre-process the lsun data.
 
 
-## Running the generative inversion
+## Generative inversion
 The generative inversion we use is based on [mGAN](https://github.com/genforce/mganprior) but we do some modifications to their code, which is why we have our own version in this repository.
 
 **(1)** You need to download the pre-trained generative networks (we use PGGAN), and put the `pretrain` folder inside `code/mganprior/models/`. You can download them from the original repo, or mGAN's, or from our link [right here](https://drive.google.com/drive/folders/1nWk76mPtPxWrd9-tPJA3H7zyQmHLYznQ?usp=sharing).
@@ -49,7 +48,7 @@ export XDG_CACHE_HOME=cache/
 **(3)** We compiled the commands for all experiments in the bash file `runall_mGAN.sh`, you can find the templates inside to rerun each experiment.
 
 
-## Training for \phi
+## Training
 The `train_cnn.sh` bash compiles the commands to retrain all our experiments, for instance for colorization:
 ```
 python code/train.py --experiment col_bedroom --lr 0.01 --batch_size 8 --backbone D --phi_weight 1e-5
@@ -58,7 +57,7 @@ the experiment name is parsed in 2 to determine the task and the dataset, the re
 
 If you retrain multiple times for a given experiment, every run is saved with an incremented ID starting from 0, and the corresponding parameters are also saved as `OURargs.txt` next to the network checkpoints.
 
-## Testing with our models
+## Testing
 The `test_cnn.sh` bash compiles the commands to test all our experiments, for instance for colorization:
 ```
 python code/train.py --experiment col_bedroom --test_model 1 --test True --test_epoch 24
