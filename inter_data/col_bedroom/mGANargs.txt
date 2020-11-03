@@ -1,0 +1,21 @@
+{
+  "target_images": "data/lsun/data/bedroom",
+  "outputs": "inter_data/col_bedroom",
+  "inversion_type": "PGGAN-Multi-Z",
+  "composing_layer": 6,
+  "z_number": 20,
+  "image_size": 256,
+  "loss_type": "Combine",
+  "vgg_loss_type": "L1",
+  "vgg_layer": 16,
+  "l1_lambda": 0.0,
+  "l2_lambda": 1.0,
+  "vgg_lambda": 1.0,
+  "optimization": "GD",
+  "init_type": "Normal",
+  "lr": 1.0,
+  "iterations": 1500,
+  "gan_model": "pggan_bedroom",
+  "video": false,
+  "fps": 24
+}
