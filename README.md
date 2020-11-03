@@ -29,10 +29,11 @@ The figure below illustrates the BIGPrior pipeline, with a generative-network in
 
 
 ## Repo structure overview
-All code is in the `code` directory, and _input_ data is in the `data` folder. The `net_data` directory stores the network weights per epoch (along with many other trackers and all experiment parameters), it uses an automated index incrementation strategy on top of the experiment name for avoiding over-writing. We generate a lot of intermediate data for the different experiments, and along with the final outputs, these are written in `inter_data`.
+All code is in the `code` directory, and _input_ data are in the `data` folder. The `net_data` directory stores the network weights per epoch (along with many other trackers and all experiment parameters), it uses an automated index incrementation strategy on top of the experiment name for avoiding over-writing. We generate a lot of intermediate data for the different experiments, and along with the final outputs, these are written in `inter_data`.
 
 
 ## Setting up the data
+The needed data are already stored under `data`, if you want to repeat our experiments with different datasets we added a help [README](https://github.com/majedelhelou/BIGPrior/tree/main/data/lsun) under `data/lsun/` explaining how to pre-process the lsun data.
 
 
 ## Running the generative inversion
@@ -49,8 +50,22 @@ export XDG_CACHE_HOME=cache/
 
 
 ## Training for $\phi$
+The `train_cnn.sh` bash compiles the commands to retrain all our experiments, for instance for colorization:
+```
+python code/train.py --experiment col_bedroom --lr 0.01 --batch_size 8 --backbone D --phi_weight 1e-5
+```
+the experiment name is parsed in 2 to determine the task and the dataset, the remaining args control the network or training parameters. All are detailed in `code/train.py`.
 
+If you retrain multiple times for a given experiment, every run is saved with an incremented ID starting from 0, and the corresponding parameters are also saved as `OURargs.txt` next to the network checkpoints.
 
+## Testing with our models
+The `test_cnn.sh` bash compiles the commands to test all our experiments, for instance for colorization:
+```
+python code/train.py --experiment col_bedroom --test_model 1 --test True --test_epoch 24
+```
+where the _test\_model_ argument selects the ID of the already-trained experiment. The arguments of the chosen experiments are also saved under `inter_data/{experiment}/OURoutput/OURargs.txt` because, unlike network weights, the image outputs get over-written with every new run. This is because their computation is fast but they take a lot of storage.
 
-## Testing with our pretrained models
+**Note:** our pretrained models are already available within this repo (epoch 25 only), so if you want to test without retraining it can be done directly.
 
+## Results visualization
+We group all results processing, visualization, quantitative assessment, also including our correlation analysis figure, in one comprehensive [notebook](https://github.com/majedelhelou/BIGPrior/blob/main/code/visualization.ipynb). It contains a large number of control parameters to obtain all the different table results, and more.
