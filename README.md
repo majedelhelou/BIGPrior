@@ -65,7 +65,7 @@ python code/train.py --experiment col_bedroom --test_model 1 --test True --test_
 ```
 where the _test\_model_ argument selects the ID of the already-trained experiment. The arguments of the chosen experiments are also saved under `inter_data/{experiment}/OURoutput/OURargs.txt` because, unlike network weights, the image outputs get over-written with every new run. This is because their computation is fast but they take a lot of storage.
 
-**Note:** our pretrained models are already available within this repo (epoch 25 only), so if you want to test without retraining it can be done directly.
+**Note:** our pretrained models are already available within this repo under `net_data` (epoch 25 only, i.e. ID 24), so if you want to test without retraining it can be done directly.
 
 ## Results visualization
 We group all results processing, visualization, quantitative assessment, also including our correlation analysis figure, in one comprehensive [notebook](https://github.com/majedelhelou/BIGPrior/blob/main/code/visualization.ipynb). It contains a large number of control parameters to obtain all the different table results, and more.

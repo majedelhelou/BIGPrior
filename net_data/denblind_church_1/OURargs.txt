@@ -1,0 +1,18 @@
+{
+  "experiment": "denblind_church",
+  "extend_input": false,
+  "backbone": "D",
+  "dncnn_layers": 17,
+  "memnet_channels": 5,
+  "memnet_memblocks": 5,
+  "memnet_resblocks": 5,
+  "batch_size": 8,
+  "epochs": 50,
+  "lr": 0.01,
+  "phi_weight": 1e-05,
+  "train_count": 250,
+  "test": false,
+  "test_model": 0,
+  "test_epoch": 49,
+  "test_data": "Default"
+}
