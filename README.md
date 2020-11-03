@@ -49,7 +49,7 @@ export XDG_CACHE_HOME=cache/
 **(3)** We compiled the commands for all experiments in the bash file `runall_mGAN.sh`, you can find the templates inside to rerun each experiment.
 
 
-## Training for $\phi$
+## Training for \phi
 The `train_cnn.sh` bash compiles the commands to retrain all our experiments, for instance for colorization:
 ```
 python code/train.py --experiment col_bedroom --lr 0.01 --batch_size 8 --backbone D --phi_weight 1e-5
