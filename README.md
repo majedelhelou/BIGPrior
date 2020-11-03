@@ -28,14 +28,14 @@ The figure below illustrates the BIGPrior pipeline, with a generative-network in
 
 
 
-### Repo structure overview
+## Repo structure overview
 All code is in the `code` directory, and _input_ data is in the `data` folder. The `net_data` directory stores the network weights per epoch (along with many other trackers and all experiment parameters), it uses an automated index incrementation strategy on top of the experiment name for avoiding over-writing. We generate a lot of intermediate data for the different experiments, and along with the final outputs, these are written in `inter_data`.
 
 
-### Setting up the data
+## Setting up the data
 
 
-### Running the generative inversion
+## Running the generative inversion
 The generative inversion we use is based on [mGAN](https://github.com/genforce/mganprior) but we do some modifications to their code, which is why we have our own version in this repository.
 
 **(1)** You need to download the pre-trained generative networks (we use PGGAN), and put the `pretrain` folder inside `code/mganprior/models/`. You can download them from the original repo, or mGAN's, or from our link [right here](https://drive.google.com/drive/folders/1nWk76mPtPxWrd9-tPJA3H7zyQmHLYznQ?usp=sharing).
@@ -48,9 +48,9 @@ export XDG_CACHE_HOME=cache/
 **(3)** We compiled the commands for all experiments in the bash file `runall_mGAN.sh`, you can find the templates inside to rerun each experiment.
 
 
-### Training for $\phi$
+## Training for $\phi$
 
 
 
-### Testing with our pretrained models
+## Testing with our pretrained models
 
