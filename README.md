@@ -68,11 +68,11 @@ where the _test\_model_ argument selects the ID of the already-trained experimen
 We group all results processing, visualization, quantitative assessment, also including our correlation analysis figure, in one comprehensive [notebook](https://github.com/majedelhelou/BIGPrior/blob/main/code/visualization.ipynb). It contains a large number of control parameters to obtain all the different table results, and more.
 
 ## Citation
-
-    @article{elhelou2020bigprior,
-        title={{BIGPrior}: Towards Decoupling Learned Prior Hallucination and Data Fidelity in Image Restoration},
-        author={El Helou, Majed and S{\"u}sstrunk, Sabine},
-        journal={arXiv preprint arXiv:2011.01406},
-        year={2020}
-    }
-
+```bibtex
+@article{elhelou2020bigprior,
+    title   = {{BIGPrior}: Towards Decoupling Learned Prior Hallucination and Data Fidelity in Image Restoration},
+    author  = {El Helou, Majed and S{\"u}sstrunk, Sabine},
+    journal = {arXiv preprint arXiv:2011.01406},
+    year    = {2020}
+}
+```
