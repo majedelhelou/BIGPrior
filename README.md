@@ -11,7 +11,7 @@
 ## BIGPrior pipeline
 The figure below illustrates the BIGPrior pipeline, with a generative-network inversion for the learned prior. 
 <p align="center">
-  <img src="readme_figures/pipeline.png" width="600px"/>
+  <img src="readme_figures/pipeline.PNG" width="600px"/>
 </p>
 
 
