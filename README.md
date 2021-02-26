@@ -71,7 +71,7 @@ We group all results processing, visualization, quantitative assessment, also in
 ```bibtex
 @article{elhelou2020bigprior,
     title   = {{BIGPrior}: Towards Decoupling Learned Prior Hallucination and Data Fidelity in Image Restoration},
-    author  = {El Helou, Majed and S{\"u}sstrunk, Sabine},
+    author  = {El Helou, Majed and S\"usstrunk, Sabine},
     journal = {arXiv preprint arXiv:2011.01406},
     year    = {2020}
 }
