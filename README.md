@@ -1,6 +1,6 @@
 # BIGPrior: Towards Decoupling Learned Prior Hallucination and Data Fidelity in Image Restoration
 
-**Authors**: [Majed El Helou](https://majedelhelou.github.io/), and Sabine Süsstrunk
+**Authors**: [Majed El Helou](https://majedelhelou.github.io/) and Sabine Süsstrunk
 
 **Publisher**: IEEE Transactions on Image Processing
 
