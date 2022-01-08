@@ -1,7 +1,10 @@
 # BIGPrior: Towards Decoupling Learned Prior Hallucination and Data Fidelity in Image Restoration
 
 **Authors**: [Majed El Helou](https://majedelhelou.github.io/), and Sabine Süsstrunk
+
 **Publisher**: IEEE Transactions on Image Processing
+
+**Further reading**: This work builds on our previous [BUIFD](https://github.com/majedelhelou/BUIFD) (TIP'20), and addresses the restoration hallucination issue studied in [SFM](https://github.com/majedelhelou/SFM) (ECCV'20).
 
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg?style=plastic)
 ![pytorch 1.1.0](https://img.shields.io/badge/pytorch-1.1.0-green.svg?style=plastic)
