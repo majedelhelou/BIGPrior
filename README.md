@@ -1,12 +1,11 @@
 # BIGPrior: Towards Decoupling Learned Prior Hallucination and Data Fidelity in Image Restoration
 
 **Authors**: [Majed El Helou](https://majedelhelou.github.io/), and Sabine Süsstrunk
+**Publisher**: IEEE Transactions on Image Processing
 
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg?style=plastic)
 ![pytorch 1.1.0](https://img.shields.io/badge/pytorch-1.1.0-green.svg?style=plastic)
 ![CUDA 10.1](https://camo.githubusercontent.com/5e1f2e59c9910aa4426791d95a714f1c90679f5a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f637564612d31302e312d677265656e2e7376673f7374796c653d706c6173746963)
-
-{Note: paper under submission}
 
 ## BIGPrior pipeline
 The figure below illustrates the BIGPrior pipeline, with a generative-network inversion for the learned prior. 
@@ -15,7 +14,7 @@ The figure below illustrates the BIGPrior pipeline, with a generative-network in
 </p>
 
 
-#### [[Paper]](https://arxiv.org/abs/2011.01406)
+#### [[Paper]](https://arxiv.org/abs/2011.01406) [[Supp]](https://github.com/majedelhelou/BIGPrior/blob/main/BIGPrior_supplementary_material.pdf)
 
 > **Abstract:** *Image restoration, such as denoising, inpainting, colorization, etc. encompasses fundamental image processing tasks that have been addressed with different algorithms and deep learning methods. Classical image restoration algorithms leverage a variety of priors, either implicitly or explicitly. Their priors are hand-designed and their corresponding weights are heuristically assigned. Thus, deep learning methods often produce superior image restoration quality. Deep networks are, however, capable of strong and hardly-predictable hallucinations of the data to be restored. Networks jointly and implicitly learn to be faithful to the observed data while learning an image prior, and the separation of original data and hallucinated data downstream is then not possible. This limits their wide-spread adoption in image restoration applications. Furthermore, it is often the hallucinated part that is victim to degradation-model overfitting.*
 >
@@ -69,10 +68,10 @@ We group all results processing, visualization, quantitative assessment, also in
 
 ## Citation
 ```bibtex
-@article{elhelou2020bigprior,
+@article{elhelou2022bigprior,
     title   = {{BIGPrior}: Towards Decoupling Learned Prior Hallucination and Data Fidelity in Image Restoration},
     author  = {El Helou, Majed and S\"usstrunk, Sabine},
-    journal = {arXiv preprint arXiv:2011.01406},
-    year    = {2020}
+    journal = {IEEE Transactions on Image Processing},
+    year    = {2022}
 }
 ```
